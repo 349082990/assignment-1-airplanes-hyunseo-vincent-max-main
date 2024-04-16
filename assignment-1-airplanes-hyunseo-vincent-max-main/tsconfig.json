@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonJS",
+    "outDir": "dist", //optionally use “” to not use an output folder
+    "sourceMap": true,
+    "strict": true,
+  },
+  "include": ["src/**/*"],
+}
+
+/*
+    
+  npm i -D typescript ts-node @types/node
+
+  cd folder-name 
+  npx tsc
+  node dist/name.js
+  npx ts-node src/name.ts
+  npm i -D typescript @types/node live-server
+  npx live-server .
+  npm init
+*/

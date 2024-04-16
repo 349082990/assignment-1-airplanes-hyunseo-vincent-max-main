@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body onload="startSetUp();">
+    <div class="wrapper">
+      <div class="bg">Airport Search Centre</div>
+      <div class="fg">Airport Search Centre</div>
+      <p></p>
+      <p></p>
+    </div>
+
+    <div id="pagination">
+      <button id="prevBtn"><<</button>
+      <button id="nextBtn">>></button>
+      <span id="currentPage">Page: </span>
+      <input type="number" id="pageInput" placeholder="Press Enter..." />
+
+      <label for="searchSelect">Search by:</label>
+      <select id="searchSelect">
+        <option value="Ident">IDENT</option>
+        <option value="Country">COUNTRY</option>
+        <option value="Name">NAME</option>
+        <option value="Type">TYPE</option>
+      </select>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Enter search term... (exact word)"
+      />
+      <button id="searchBtn">Search</button>
+      <button id="sortingPageBtn">Sorting Page</button>
+
+      <p id="searchTime"></p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Continent:</th>
+          <th>Ident:</th>
+          <th>Iso_country:</th>
+          <th>Iso_region:</th>
+          <th>Latitude_deg:</th>
+          <th>Longitude_deg:</th>
+          <th>Name:</th>
+          <th>Type:</th>
+        </tr>
+      </thead>
+
+      <tbody id="continentTable"></tbody>
+    </table>
+
+    <!-- Do not move the line below -->
+    <script src="./dist/DO_NOT_TOUCH.js"></script>
+    <!-- Do not move the line above -->
+    <script src="./dist/sorting.js"></script>
+    <script src="./dist/index.js"></script>
+    <script src="./dist/button.js"></script>
+    <script src="./dist/searching.js"></script>
+    <script src="./dist/bonus.js"></script>
+  </body>
+</html>

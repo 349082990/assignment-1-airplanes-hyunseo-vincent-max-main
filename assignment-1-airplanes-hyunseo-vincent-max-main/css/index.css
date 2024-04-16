@@ -1,0 +1,138 @@
+body {
+  background-color: #a8a8a8;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #000;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="number"],
+input[type="text"] {
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  height: calc(100vh - 240px);
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+}
+
+tbody {
+  background-color: #ccc;
+}
+
+td {
+  color: #000;
+}
+
+#pagination {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#prevBtn {
+  margin-right: 8px;
+}
+
+#searchInput {
+  width: 250px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+:root {
+  --black: black;
+  --light-shadow: gray;
+  --dark-shadow: lightgray;
+}
+
+.wrapper {
+  background: radial-gradient(#a8a8a8);
+  display: grid;
+  grid-template-areas: "overlap";
+  place-content: center;
+  text-transform: uppercase;
+  height: 10vh;
+}
+.wrapper > div {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: "Poppins", sans-serif;
+  font-weight: 20;
+  font-size: clamp(1em, 7vw, 3.5rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.wrapper:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+div.bg {
+  background-image: repeating-linear-gradient(
+    105deg,
+    var(--black) 0%,
+    var(--black) 12%
+  );
+  color: transparent;
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+div.fg {
+  background-image: repeating-linear-gradient(
+    5deg,
+    var(--black) 0%,
+    var(--black) 31%
+  );
+  color: #1e2127;
+  transform: scale(1);
+}

@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sorting.css" />
+  </head>
+  <body onload="secondPageSetUp();">
+    <div class="wrapper">
+      <div class="bg">Airport Search Centre</div>
+      <div class="fg">Airport Search Centre</div>
+      <p></p>
+      <p></p>
+    </div>
+
+    <div id="pagination">
+      <button id="secondPrevBtn"><<</button>
+      <button id="secondNextBtn">>></button>
+      <span id="currentPage">Page: </span>
+      <input type="number" id="secondPageInput" placeholder="Press Enter..." />
+      <button id="goToFirstPage">Searching Page</button>
+
+      <label for="sorting">Sort by:</label>
+      <select id="sortSelect">
+        <option>CONTINENT</option>
+        <option>IDENT</option>
+        <option>COUNTRY</option>
+        <option>REGION</option>
+        <option>LATITUDE_DEG</option>
+        <option>LONGITUDE_DEG</option>
+        <option>NAME</option>
+        <option>TYPE</option>
+      </select>
+
+      <select id="sortingType">
+        <option>Ascending</option>
+        <option>Descending</option>
+      </select>
+
+      <button id="secondPageSort">Sort</button>
+      <button id="bonusOneBtn">Bonus 1 - Great Circle Distance</button>
+      <button id="bonusTwoBtn">Bonus 2 - Transfer</button>
+      <button id="bonusThreeBtn">Bonus 3 - Shortest</button>
+    </div>
+    <p id="sortingTime"></p>
+
+    <div id="pagination" hidden>
+      <span id="displayDistance">Distance: </span>
+      <input type="text" id="firstID" placeholder="Airport 1 ID" />
+      <input type="text" id="secondID" placeholder="Airport 2 ID" />
+      <button id="distanceBtn">Find Distance</button>
+    </div>
+    <p id="bonusOne"></p>
+    <p id="bonusOneTime"></p>
+
+    <div id="pagination" hidden>
+      <label for="transfer" id="transferNumsB2"> # of Transfers:</label>
+      <select id="transferNum">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+      </select>
+      <span id="displayCumulative">Final Cumulative Distance: </span>
+      <input type="text" id="B2-start" placeholder="Starting Airport ID" />
+      <input type="text" id="B2-end" placeholder="Ending Airport ID" />
+      <p></p>
+      <p><input type="text" id="B2-T1" placeholder="Transfer 1 ID" /></p>
+      <p><input type="text" id="B2-T2" placeholder="Transfer 2 ID" /></p>
+      <p><input type="text" id="B2-T3" placeholder="Transfer 3 ID" /></p>
+      <p><input type="text" id="B2-T4" placeholder="Transfer 4 ID" /></p>
+      <p><input type="text" id="B2-T5" placeholder="Transfer 5 ID" /></p>
+      <p><input type="text" id="B2-T6" placeholder="Transfer 6 ID" /></p>
+      <p><input type="text" id="B2-T7" placeholder="Transfer 7 ID" /></p>
+      <button id="cumulativeBtn">Find Distances</button>
+    </div>
+
+    <p id="bonusTwo"></p>
+    <p id="bonusTwoTime"></p>
+
+    <div id="pagination" hidden>
+      <span id="displayShortest"> Shortest Distance: </span>
+      <input type="text" id="B3-start" placeholder="Starting Airport ID" />
+      <input type="text" id="B3-end" placeholder="Ending Airport ID" />
+      <input
+        type="number"
+        id="transferNumsB3"
+        placeholder="Required Transfers"
+      />
+      <button id="shortest">Find the Shortest Distance</button>
+    </div>
+    <p id="bonusThree"></p>
+    <p id="bonusThreeTime"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Continent:</th>
+          <th>Ident:</th>
+          <th>Iso_country:</th>
+          <th>Iso_region:</th>
+          <th>Latitude_deg:</th>
+          <th>Longitude_deg:</th>
+          <th>Name:</th>
+          <th>Type:</th>
+        </tr>
+      </thead>
+      <tbody id="continentTable"></tbody>
+    </table>
+
+    <!-- Do not move the line below -->
+    <script src="./dist/DO_NOT_TOUCH.js"></script>
+    <!-- Do not move the line above -->
+    <script src="./dist/sorting.js"></script>
+    <script src="./dist/index.js"></script>
+    <script src="./dist/button.js"></script>
+    <script src="./dist/searching.js"></script>
+    <script src="./dist/bonus.js"></script>
+    <script src="./dist/bonusThree.js"></script>
+    <script src="./dist/bonusFour.js"></script>
+  </body>
+</html>
